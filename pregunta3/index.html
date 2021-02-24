@@ -1,59 +1,40 @@
-<!--
-    Crear un index.html con lo básico de html5 para iniciar una página más un formulario que pida un partido politico, 
-    su orientación (izq, centro, der)y la cantidad de votos 
-    
-    al dar click en el botónenviar debe agregar una 
-    fila a la tabla que se encuentra abajo del formulario.
-    
-     Si la cantidad de votos es mayor a 50 colocar 50+ 
-
-    si es menos colocar 50-si es igual 50=. 
-    
-    Antes de  la  tabla  habrá  otro botóncon  la  leyenda  ganador,
-
-    al  presionarlo  deberá  buscar  entretodos los partidos el que tenga más votos.
-    
-    Y por medio de un alerta 
-
-    decir quién es el partido con mas votos y quien es el partido con menos votos. 
-
-    Para efectos simplicidad no ingrese valores iguales en los votos.
--->
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
+    <label for="">Partido: </label>
+    <input type="text" id="nombre"> <br><br>
 
-<h1>Formulario</h1>
+    <label for="">Orientacion:</label>
+    <select size="1" id="orientacion"> <br><br>
+        <option value="izq">Izquierda</option>
+        <option value="centro">Centro</option>
+        <option value="der">Derecha</option> 
+    </select> <br><br>
 
+    <label for="">Cantidad de votos: </label>
+    <input type="text" id="cantidad"> <br><br>
+    <button id="sub" onclick="submit()">Enviar</button>
 
-<form id="form1">
-  <label for="fname">Nombre: </label>
-  <input type="text" id="fname" name="fname"><br><br>
-</form>
-
-
-<label for="lname">Orientación politica: </label>
-<input type="text" id="lname" name="lname" form="form1"> <br><br>
-
-<label for="lname">Cantidad de votos </label>
-<input type="text" id="lname" name="lname" form="form1"> <br><br>
-
-<!-- Un botón para submit-->
-<button id = “enviar”  type = "submit"> Enviar</button>
-
-<!-- Crear una tabla con los datos ingresados
-
- 	Si la cantidad de votos es mayor a 50 colocar 50+ si es menos colocar 50-si es 		igual 50= (FUNCION)
+    <table id="Datos">
+        <tr>
+            <th>Nombre</th>
+            <th>Orientacion</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+        </tr>
+    </table>
     
-    Crear boton ganador
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
     
     Buscar el mas votado y mostrar una alert (FUNCION)
     
